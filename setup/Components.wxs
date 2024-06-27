@@ -1,0 +1,18 @@
+<Wix xmlns="http://wixtoolset.org/schemas/v4/wxs">
+  <Fragment>
+    <ComponentGroup Id="MyWpfAppComponents">
+      <Component
+        Id="WpfApp"
+        Guid="7d3f9b16-7c8b-4798-becf-a48d87152f08"
+        Directory="INSTALLFOLDER"
+      >
+        <File Source="../src/publish/D3DCompiler_47_cor3.dll" />
+        <File Source="../src/publish/PenImc_cor3.dll" />
+        <File Source="../src/publish/sample-wpf-app.exe" />
+        <File Source="../src/publish/PresentationNative_cor3.dll" />
+        <File Source="../src/publish/vcruntime140_cor3.dll" />
+        <File Source="../src/publish/wpfgfx_cor3.dll" />
+      </Component>
+    </ComponentGroup>
+  </Fragment>
+</Wix>

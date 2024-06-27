@@ -1,0 +1,30 @@
+<Wix xmlns="http://wixtoolset.org/schemas/v4/wxs">
+  <Fragment>
+    <DirectoryRef Id="INSTALLFOLDER">
+      <Component Id="MyWpfAppShortcut" Guid="9885f628-1b5f-4e3a-a219-01576e9b43b8">
+        <Shortcut
+            Id="MyWpfAppDesktopShortcut"
+            Name="MyWpfApp"
+            Description="MyWpfApp"
+            Target="[INSTALLFOLDER]sample-wpf-app.exe"
+            WorkingDirectory="INSTALLFOLDER"
+            Icon="MyWpfAppIcon"
+            IconIndex="0"
+            Directory="DesktopFolder"/>
+
+        <Shortcut
+            Id="MyWpfAppStartMenuShortcut"
+            Name="MyWpfApp"
+            Description="MyWpfApp"
+            Target="[INSTALLFOLDER]sample-wpf-app.exe"
+            WorkingDirectory="INSTALLFOLDER"
+            Icon="MyWpfAppIcon"
+            IconIndex="0"
+            Directory="ApplicationProgramsFolder"/>
+
+        <RemoveFolder Id="CleanUpShortcuts" Directory="ApplicationProgramsFolder" On="uninstall" />
+        <RegistryValue Root="HKCU" Key="Software\MyWpfApp" Name="installed" Type="integer" Value="1" KeyPath="yes" />
+      </Component>
+    </DirectoryRef>
+  </Fragment>
+</Wix>
