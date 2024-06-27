@@ -1,0 +1,5 @@
+<Project Sdk="WixToolset.Sdk/4.0.0">
+  <ItemGroup>
+    <ProjectReference Include="..\src\sample-wpf-app.csproj" />
+  </ItemGroup>
+</Project>
